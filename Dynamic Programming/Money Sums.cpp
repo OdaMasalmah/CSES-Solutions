@@ -36,9 +36,7 @@ void solve() {
 
         set<int> st;
         for (int i= 1; i< N; i++) {
-                for (int j= 0; j< n; j++) {
-                        if (dp[i][j]) st.insert(i);
-                }
+                if (dp[i][n- 1]) st.insert(i);
         }
 
         cout << st.size()<< "\n";
