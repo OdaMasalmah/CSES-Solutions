@@ -19,8 +19,6 @@ void solve() {
         // 0 sum from any element
         for (int i= 0; i< n; i++) dp[0][i]= 1;
 
-        sort(all(v));
-
         for (int i= 1; i< N; i++) {
                 for (int j= 0; j< n; j++) {
                         if (j== 0&& i- v[j]== 0) {
