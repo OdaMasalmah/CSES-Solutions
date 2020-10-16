@@ -20,7 +20,7 @@ void solve() {
 
         for (int i= 1; i<= x; i++) {
                 for (int j= 0; j< n; j++) {
-                        if (i- vp[j].first< 0) break; // any this after this can't take
+                        if (i- vp[j].first< 0) break; // any one after this can't take
                         // take first element if can
                         if (i- vp[j].first>= 0&& j== 0)
                                 dp[i][j]= max(dp[i][j], dp[i][j]+ vp[j].second);
