@@ -21,10 +21,10 @@ void solve() {
         for (int i= 1; i<= x; i++) {
                 for (int j= 0; j< n; j++) {
                         if (i- vp[j].first< 0) break; // any this after this can't take
-                        // take first j
+                        // take first element if can
                         if (i- vp[j].first>= 0&& j== 0)
                                 dp[i][j]= max(dp[i][j], dp[i][j]+ vp[j].second);
-                        // take j and max from j- n and x- price[j]
+                        // take j and max from j- 1 and x- price[j]
                         if (i- vp[j].first>= 0&& j- 1>= 0)
                                 dp[i][j]= max(dp[i][j], dp[i- vp[j].first][j- 1]+ vp[j].second);
                         // max from previous j
